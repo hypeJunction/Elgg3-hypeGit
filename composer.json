@@ -1,0 +1,30 @@
+{
+	"name": "hypejunction/hypegit",
+	"type": "elgg-plugin",
+	"description": "Github integration",
+	"homepage": "http://hypejunction.com",
+	"keywords": [
+		"elgg", "plugin", "github"
+	],
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Ismayil Khayredinov",
+			"email": "info@hypejunction.com"
+		}
+	],
+	"extra": {
+		"installer-name": "hypeGit"
+	},
+	"require": {
+		"php": ">=7.0",
+		"composer/installers": "~1.0",
+		"knplabs/github-api": "^2.8",
+		"php-http/guzzle6-adapter": "^1.1"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "classes/"
+		}
+	}
+}
