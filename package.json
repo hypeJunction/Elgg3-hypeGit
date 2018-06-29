@@ -4,9 +4,9 @@
 	"license": "SEE LICENSE IN https://hypejunction.com/license",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:hypeJunction/hypeGit.git",
-		"owner": "hypeJunction",
-		"repo": "hypeGit"
+		"url": "git@github.com:hypeJunctionPro/Elgg3-hypeGit.git",
+		"owner": "hypeJunctionPro",
+		"repo": "Elgg3-hypeGit"
 	},
 	"dependencies": {
 		"curlrequest": "^1.0.1",
