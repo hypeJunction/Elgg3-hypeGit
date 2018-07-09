@@ -9,4 +9,6 @@ return [
 	'field:object:download:composer:package_name' => 'Composer Package',
 
 	'github:usersettings:token' => 'GitHub Token',
+
+	'downloads:dependencies' => 'Dependencies',
 ];

@@ -89,15 +89,15 @@ class GithubEntities {
 			if ($download->{'composer.json'}) {
 				$composer = json_decode($download->{'composer.json'});
 				$download->{'composer:package_name'} = $composer->name;
-				if (!$download->license) {
-					$download->license = $composer->license;
-				}
 				if (!$download->tags) {
 					$download->tags = $composer->keywords;
 				}
+
+				if ($composer->type === 'elgg-plugin') {
+					$download->{'manifest.xml'} = $this->query->getFile($name, 'manifest.xml');
+				}
 			}
 
-			$download->{'manifest.xml'} = $this->query->getFile($name, 'manifest.xml');
 			$download->{'package.json'} = $this->query->getFile($name, 'package.json');
 
 			$this->query->authenticate();
