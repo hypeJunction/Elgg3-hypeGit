@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/hypeJunctionPro/Elgg3-hypeGit/compare/1.1.0...1.1.1) (2018-11-12)
+
+
+### Bug Fixes
+
+* **git:** clean up orphaned packages ([c9c881f](https://github.com/hypeJunctionPro/Elgg3-hypeGit/commit/c9c881f))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/hypeJunctionPro/Elgg3-hypeGit/compare/1.0.0...1.1.0) (2018-07-09)
 
