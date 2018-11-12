@@ -47,6 +47,14 @@ class GithubEntities {
 				return;
 			}
 
+			$owner = $download->getOwnerEntity();
+			if (!$owner instanceof \ElggUser) {
+				unset($download->{'github:package_name'});
+				unset($download->{'composer:package_name'});
+
+				return;
+			}
+
 			$this->query->authenticate($download->getOwnerEntity());
 
 			$package = $this->query->getPackage($name);
