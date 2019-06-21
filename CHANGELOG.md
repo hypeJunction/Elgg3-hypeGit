@@ -1,3 +1,13 @@
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/hypeJunction/Elgg3-hypeGit/compare/1.2.2...1.2.3) (2019-06-21)
+
+
+### Bug Fixes
+
+* **hooks:** correctly store webhook id after it is created ([7f6ef3b](https://github.com/hypeJunction/Elgg3-hypeGit/commit/7f6ef3b))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/hypeJunction/Elgg3-hypeGit/compare/1.2.1...1.2.2) (2019-06-21)
 
