@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/hypeJunctionPro/Elgg3-hypeGit/compare/1.1.1...1.2.0) (2019-06-21)
+
+
+### Features
+
+* **hooks:** setup a webhook to notify about new releases ([2812549](https://github.com/hypeJunctionPro/Elgg3-hypeGit/commit/2812549))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/hypeJunctionPro/Elgg3-hypeGit/compare/1.1.0...1.1.1) (2018-11-12)
 
