@@ -22,5 +22,6 @@ class SyncReleases {
 
 		GithubEntities::instance()->syncPackageDetails($entity);
 		GithubEntities::instance()->syncReleases($entity);
+		GithubEntities::instance()->setupWebhook($entity);
 	}
 }

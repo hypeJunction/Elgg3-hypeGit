@@ -179,4 +179,55 @@ class GithubEntities {
 			$this->query->authenticate();
 		});
 	}
+
+	/**
+	 * Setup webhooks
+	 *
+	 * @param Download $download Download object
+	 *
+	 * @return mixed
+	 */
+	public function setupWebhook(Download $download) {
+		return elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($download) {
+			$name = $download->{'github:package_name'};
+			if (!$name) {
+				return;
+			}
+
+			if ($download->{'github:webhook_id'}) {
+				return;
+			}
+
+			if (!$download->{'github:secret'}) {
+				$download->{'github:secret'} = generate_random_cleartext_password();
+			}
+
+			$this->query->authenticate($download->getOwnerEntity());
+
+			list($username, $package) = explode('/', $name, 2);
+
+			try {
+				$result = $this->query->repo()->hooks()->create($username, $package, [
+					'name' => 'web',
+					'active' => true,
+					'events' => [
+						'release',
+					],
+					'config' => [
+						'url' => elgg_normalize_url(elgg_generate_url('github:webhook', [
+							'guid' => $download->guid,
+						])),
+						'content_type' => 'json',
+						'secret' => $download->{'github:secret'},
+					],
+				]);
+
+				$download->{'github:webhook_id'} = $result->id;
+			} catch (\Exception $ex) {
+				elgg_log($ex, 'error');
+			}
+
+			$this->query->authenticate();
+		});
+	}
 }
