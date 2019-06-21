@@ -222,7 +222,7 @@ class GithubEntities {
 					],
 				]);
 
-				$download->{'github:webhook_id'} = $result->id;
+				$download->{'github:webhook_id'} = $result['id'];
 			} catch (\Exception $ex) {
 				elgg_log($ex, 'error');
 			}
