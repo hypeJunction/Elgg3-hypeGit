@@ -1,0 +1,1 @@
+{"version":1,"defects":{"hypeJunction\\Git\\BootstrapTest::testRoutesAreRegistered":3,"hypeJunction\\Git\\BootstrapTest::testEventHandlersRegistered":3},"times":{"hypeJunction\\Git\\BootstrapTest::testPluginIsActive":0.002,"hypeJunction\\Git\\BootstrapTest::testRoutesAreRegistered":0,"hypeJunction\\Git\\BootstrapTest::testEventHandlersRegistered":0}}

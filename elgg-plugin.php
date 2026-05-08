@@ -1,6 +1,10 @@
 <?php
 
 return [
+	'plugin' => [
+		'version' => '5.0.0',
+	],
+
 	'bootstrap' => \hypeJunction\Git\Bootstrap::class,
 
 	'routes' => [

@@ -2,81 +2,24 @@
 
 namespace hypeJunction\Git;
 
-use Elgg\Includer;
-use Elgg\PluginBootstrap;
-use Github\Client;
-use hypeJunction\Downloads\SyncReleaseAccess;
+use Elgg\DefaultPluginBootstrap;
 
-class Bootstrap extends PluginBootstrap {
+class Bootstrap extends DefaultPluginBootstrap {
 
-	/**
-	 * Get plugin root
-	 * @return string
-	 */
-	protected function getRoot() {
-		return $this->plugin->getPath();
+	public function load(): void {
+		$autoloader = dirname(__DIR__, 3) . '/autoloader.php';
+		if (file_exists($autoloader)) {
+			require_once $autoloader;
+		}
 	}
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function load() {
-		Includer::requireFileOnce($this->getRoot() . '/autoloader.php');
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function boot() {
-
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function init() {
-		elgg_register_plugin_hook_handler('fields', 'object:download', SetupDownloadFields::class);
-		elgg_register_plugin_hook_handler('modules', 'object:download', SetupDownloadModules::class);
+	public function init(): void {
+		elgg_register_event_handler('fields', 'object:download', SetupDownloadFields::class);
+		elgg_register_event_handler('modules', 'object:download', SetupDownloadModules::class);
 
 		elgg_register_event_handler('create', 'object', SyncReleases::class);
 		elgg_register_event_handler('update', 'object', SyncReleases::class);
 
-		elgg_register_plugin_hook_handler('cron', 'daily', SetupCron::class);
+		elgg_register_event_handler('cron', 'daily', SetupCron::class);
 	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function ready() {
-
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function shutdown() {
-
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function activate() {
-
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function deactivate() {
-
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function upgrade() {
-
-	}
-
 }

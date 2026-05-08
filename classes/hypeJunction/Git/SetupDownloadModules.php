@@ -2,13 +2,13 @@
 
 namespace hypeJunction\Git;
 
-use Elgg\Hook;
+use Elgg\Event;
 
 class SetupDownloadModules {
 
-	public function __invoke(Hook $hook) {
+	public function __invoke(Event $event) {
 
-		$modules = $hook->getValue();
+		$modules = $event->getValue();
 
 		$modules['download/manifest'] = [
 			'enabled' => true,

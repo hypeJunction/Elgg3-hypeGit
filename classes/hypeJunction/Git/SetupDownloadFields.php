@@ -2,7 +2,7 @@
 
 namespace hypeJunction\Git;
 
-use Elgg\Hook;
+use Elgg\Event;
 use hypeJunction\Fields\MetaField;
 
 class SetupDownloadFields {
@@ -10,12 +10,12 @@ class SetupDownloadFields {
 	/**
 	 * Setup download object fields
 	 *
-	 * @param Hook $hook Hook
+	 * @param Event $event Hook
 	 * @return void
 	 */
-	public function __invoke(Hook $hook) {
+	public function __invoke(Event $event) {
 
-		$fields = $hook->getValue();
+		$fields = $event->getValue();
 		/* @var $fields \hypeJunction\Fields\Collection */
 
 		$fields->add('github:package_name', new MetaField([

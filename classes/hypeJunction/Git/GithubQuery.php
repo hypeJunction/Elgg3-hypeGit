@@ -2,7 +2,7 @@
 
 namespace hypeJunction\Git;
 
-use Elgg\Di\ServiceFacade;
+use Elgg\Traits\Di\ServiceFacade;
 use Github\Api\Repo;
 use Github\Client;
 
@@ -25,7 +25,7 @@ class GithubQuery {
 		$this->authenticate();
 	}
 
-	public function name() {
+	public static function name(): string {
 		return 'github.query';
 	}
 
@@ -36,7 +36,7 @@ class GithubQuery {
 	 */
 	public function authenticate(\ElggUser $user = null) {
 		$user_guid = $user ? $user->guid : null;
-		$token = elgg_get_plugin_user_setting('github-token', $user_guid, 'hypeGit');
+		$token = elgg_get_plugin_user_setting('github-token', $user_guid, 'hypegit');
 		if ($token) {
 			$this->client->authenticate($token, null, Client::AUTH_HTTP_TOKEN);
 		}

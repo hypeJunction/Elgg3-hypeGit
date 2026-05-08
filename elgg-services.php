@@ -1,9 +1,9 @@
 <?php
 
 return [
-	'github.client' => \DI\object(\Github\Client::class),
-	'github.query' => \DI\object(\hypeJunction\Git\GithubQuery::class)
+	'github.client' => \DI\create(\Github\Client::class),
+	'github.query' => \DI\create(\hypeJunction\Git\GithubQuery::class)
 		->constructor(\DI\get('github.client')),
-	'github.entities' => \DI\object(\hypeJunction\Git\GithubEntities::class)
+	'github.entities' => \DI\create(\hypeJunction\Git\GithubEntities::class)
 		->constructor(\DI\get('github.query')),
 ];
