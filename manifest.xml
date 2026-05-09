@@ -7,12 +7,12 @@
 
     <category>admin</category>
 
-    <description>Github integration</description>
+    <description>GitHub integration for Elgg — display repository stats, commits, and branches on your Elgg site.</description>
 
-    <author>Ismayil Khayredinov (info@hypejunction.com)</author>
-    <website>http://hypeJunction.com</website>
+    <author>Ismayil Khayredinov (ismayil.khayredinov@gmail.com)</author>
+    <website>https://github.com/hypeJunction/hypegit</website>
     <copyright>2018 (c) Ismayil Khayredinov</copyright>
-    <license>https://hypejunction.com/license</license>
+    <license>https://github.com/hypeJunction/hypegit</license>
 
     <requires>
         <type>elgg_release</type>

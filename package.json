@@ -1,7 +1,7 @@
 {
 	"name": "hypeGit",
 	"version": "1.2.3",
-	"license": "SEE LICENSE IN https://hypejunction.com/license",
+	"license": "SEE LICENSE IN https://github.com/hypeJunction/hypegit",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:hypeJunction/Elgg3-hypeGit.git",

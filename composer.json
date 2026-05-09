@@ -1,16 +1,18 @@
 {
 	"name": "hypejunction/hypegit",
 	"type": "elgg-plugin",
-	"description": "Github integration",
-	"homepage": "http://hypejunction.com",
+	"description": "GitHub integration for Elgg — display repository stats, commits, and branches on your Elgg site.",
+	"homepage": "https://github.com/hypeJunction/hypegit",
 	"keywords": [
-		"elgg", "plugin", "github"
+		"elgg",
+		"plugin",
+		"github"
 	],
 	"license": "proprietary",
 	"authors": [
 		{
 			"name": "Ismayil Khayredinov",
-			"email": "info@hypejunction.com"
+			"email": "ismayil.khayredinov@gmail.com"
 		}
 	],
 	"extra": {
