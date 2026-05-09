@@ -41,7 +41,7 @@ class DigestWebhook {
 
 				$data = json_decode($payload, true);
 
-				$result = elgg_trigger_plugin_hook($event, 'github', [
+				$result = elgg_trigger_event($event, 'github', [
 					'payload' => $data,
 					'entity' => $entity,
 				]);
