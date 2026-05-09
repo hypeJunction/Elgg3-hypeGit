@@ -1,8 +1,8 @@
 {
 	"name": "hypejunction/hypegit",
 	"type": "elgg-plugin",
-	"description": "GitHub integration for Elgg — display repository stats, commits, and branches on your Elgg site.",
-	"homepage": "https://github.com/hypeJunction/hypegit",
+	"description": "GitHub integration for Elgg \u2014 display repository stats, commits, and branches on your Elgg site.",
+	"homepage": "https://github.com/hypeJunction/Elgg3-hypeGit",
 	"keywords": [
 		"elgg",
 		"plugin",
