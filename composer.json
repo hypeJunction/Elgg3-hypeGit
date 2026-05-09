@@ -1,32 +1,32 @@
 {
-	"name": "hypejunction/hypegit",
-	"type": "elgg-plugin",
-	"description": "GitHub integration for Elgg \u2014 display repository stats, commits, and branches on your Elgg site.",
-	"homepage": "https://github.com/hypeJunction/Elgg3-hypeGit",
-	"keywords": [
-		"elgg",
-		"plugin",
-		"github"
-	],
-	"license": "proprietary",
-	"authors": [
-		{
-			"name": "Ismayil Khayredinov",
-			"email": "ismayil.khayredinov@gmail.com"
-		}
-	],
-	"extra": {
-		"installer-name": "hypeGit"
-	},
-	"require": {
-		"php": ">=7.0",
-		"composer/installers": "~1.0",
-		"knplabs/github-api": "^2.8",
-		"php-http/guzzle6-adapter": "^1.1"
-	},
-	"autoload": {
-		"psr-0": {
-			"": "classes/"
-		}
-	}
+    "name": "hypejunction/hypegit",
+    "type": "elgg-plugin",
+    "description": "GitHub integration for Elgg — display repository stats, commits, and branches on your Elgg site.",
+    "homepage": "https://github.com/hypeJunction/Elgg3-hypeGit",
+    "keywords": [
+        "elgg",
+        "plugin",
+        "github"
+    ],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ismayil Khayredinov",
+            "email": "ismayil.khayredinov@gmail.com"
+        }
+    ],
+    "extra": {
+        "installer-name": "hypeGit"
+    },
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0",
+        "knplabs/github-api": "^2.8",
+        "php-http/guzzle6-adapter": "^1.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "classes/"
+        }
+    }
 }
