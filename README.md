@@ -9,4 +9,6 @@ GitHub integration for Elgg — display repository stats, commits, and branches 
 
 | Plugin version | Elgg version |
 |---|---|
-| current | 7.x |
+| 7.0.0 | 7.x |
+| 6.0.0 | 6.x |
+| 5.0.0 | 5.x |
