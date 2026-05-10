@@ -16,7 +16,7 @@
         }
     ],
     "extra": {
-        "installer-name": "hypeGit"
+        "installer-name": "hypegit"
     },
     "config": {
         "allow-plugins": {
@@ -35,5 +35,6 @@
         "psr-0": {
             "": "classes/"
         }
-    }
+    },
+    "version": "1.2.3"
 }
