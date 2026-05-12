@@ -25,7 +25,7 @@
 	},
 	"require": {
 		"composer/installers": "^2.0",
-		"php": ">=8.2",
+		"php": ">=8.1",
 		"elgg/elgg": "~6.1.0",
 		"knplabs/github-api": "^3.0",
 		"php-http/guzzle7-adapter": "^1.0"
