@@ -2,9 +2,9 @@
 
 namespace hypeJunction\Git;
 
-use Elgg\BadRequestException;
-use Elgg\EntityNotFoundException;
-use Elgg\HttpException;
+use Elgg\Exceptions\Http\BadRequestException;
+use Elgg\Exceptions\Http\EntityNotFoundException;
+use Elgg\Exceptions\HttpException;
 use Elgg\Request;
 use hypeJunction\Downloads\Download;
 

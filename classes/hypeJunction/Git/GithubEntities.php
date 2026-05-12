@@ -2,7 +2,7 @@
 
 namespace hypeJunction\Git;
 
-use Elgg\Di\ServiceFacade;
+use Elgg\Traits\Di\ServiceFacade;
 use hypeJunction\Downloads\Download;
 use hypeJunction\Downloads\Release;
 use hypeJunction\Post\River;
