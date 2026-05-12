@@ -6,7 +6,11 @@ use Elgg\Hook;
 
 class SetupDownloadModules {
 
-	public function __invoke(Hook $hook) {
+	/**
+     * @param Hook $hook
+     * @return mixed
+     */
+    public function __invoke(Hook $hook) {
 
 		$modules = $hook->getValue();
 

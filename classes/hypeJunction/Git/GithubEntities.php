@@ -224,7 +224,7 @@ class GithubEntities {
 
 				$download->{'github:webhook_id'} = $result['id'];
 			} catch (\Exception $ex) {
-				elgg_log($ex, 'error');
+				elgg()->logger->error($ex);
 			}
 
 			$this->query->authenticate();

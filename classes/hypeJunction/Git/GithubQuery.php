@@ -25,7 +25,10 @@ class GithubQuery {
 		$this->authenticate();
 	}
 
-	public function name() {
+	/**
+     * @return mixed
+     */
+    public function name() {
 		return 'github.query';
 	}
 

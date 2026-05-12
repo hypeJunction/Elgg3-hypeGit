@@ -10,7 +10,11 @@ use hypeJunction\Downloads\Download;
 
 class DigestWebhook {
 
-	public function __invoke(Request $request) {
+	/**
+     * @param Request $request
+     * @return mixed
+     */
+    public function __invoke(Request $request) {
 		return elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($request) {
 			elgg_set_viewtype('json');
 
