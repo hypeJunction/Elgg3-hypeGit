@@ -6,6 +6,9 @@ use Elgg\Traits\Di\ServiceFacade;
 use Github\Api\Repo;
 use Github\Client;
 
+/**
+ * Service facade wrapping the Github HTTP client
+ */
 class GithubQuery {
 
 	use ServiceFacade;
@@ -25,6 +28,9 @@ class GithubQuery {
 		$this->authenticate();
 	}
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public static function name(): string {
 		return 'github.query';
 	}
@@ -107,8 +113,8 @@ class GithubQuery {
 	/**
 	 * Get contents of a file
 	 *
-	 * @param string $name      Package name
-	 * @param string $reference Tag or commit reference
+	 * @param string $name Package name
+	 * @param string $path File path within the repository
 	 *
 	 * @return null|string
 	 */
@@ -120,6 +126,5 @@ class GithubQuery {
 		} catch (\Exception $ex) {
 			return null;
 		}
-
 	}
 }
