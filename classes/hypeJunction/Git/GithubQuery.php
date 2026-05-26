@@ -39,7 +39,7 @@ class GithubQuery {
 	 */
 	public function authenticate(\ElggUser $user = null) {
 		$user_guid = $user ? $user->guid : null;
-		$token = elgg_get_plugin_user_setting('github-token', $user_guid, 'hypegit');
+		$token = \elgg_get_plugin_user_setting('github-token', $user_guid, 'hypegit');
 		if ($token) {
 			$this->client->authenticate($token, null, Client::AUTH_HTTP_TOKEN);
 		}

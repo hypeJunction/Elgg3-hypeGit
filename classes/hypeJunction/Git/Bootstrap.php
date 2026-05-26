@@ -35,13 +35,13 @@ class Bootstrap extends PluginBootstrap {
 	 * {@inheritdoc}
 	 */
 	public function init() {
-		elgg_register_plugin_hook_handler('fields', 'object:download', SetupDownloadFields::class);
-		elgg_register_plugin_hook_handler('modules', 'object:download', SetupDownloadModules::class);
+		\elgg_register_plugin_hook_handler('fields', 'object:download', SetupDownloadFields::class);
+		\elgg_register_plugin_hook_handler('modules', 'object:download', SetupDownloadModules::class);
 
-		elgg_register_event_handler('create', 'object', SyncReleases::class);
-		elgg_register_event_handler('update', 'object', SyncReleases::class);
+		\elgg_register_event_handler('create', 'object', SyncReleases::class);
+		\elgg_register_event_handler('update', 'object', SyncReleases::class);
 
-		elgg_register_plugin_hook_handler('cron', 'daily', SetupCron::class);
+		\elgg_register_plugin_hook_handler('cron', 'daily', SetupCron::class);
 	}
 
 	/**
