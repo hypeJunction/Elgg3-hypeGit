@@ -41,7 +41,7 @@ class GithubEntities {
 	 * @return mixed
 	 */
 	public function syncPackageDetails(Download $download) {
-		return elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($download) {
+		return \elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($download) {
 			$name = $download->{'github:package_name'};
 			if (!$name) {
 				return;
@@ -120,7 +120,7 @@ class GithubEntities {
 	 * @return mixed
 	 */
 	public function syncReleases(Download $download) {
-		return elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($download) {
+		return \elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($download) {
 
 			$name = $download->{'github:package_name'};
 			if (!$name) {
@@ -188,7 +188,7 @@ class GithubEntities {
 	 * @return mixed
 	 */
 	public function setupWebhook(Download $download) {
-		return elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($download) {
+		return \elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($download) {
 			$name = $download->{'github:package_name'};
 			if (!$name) {
 				return;
@@ -214,7 +214,7 @@ class GithubEntities {
 						'release',
 					],
 					'config' => [
-						'url' => elgg_normalize_url(elgg_generate_url('github:webhook', [
+						'url' => \elgg_normalize_url(\elgg_generate_url('github:webhook', [
 							'guid' => $download->guid,
 						])),
 						'content_type' => 'json',
@@ -224,7 +224,7 @@ class GithubEntities {
 
 				$download->{'github:webhook_id'} = $result['id'];
 			} catch (\Exception $ex) {
-				elgg_log($ex, 'error');
+				\elgg_log($ex, 'error');
 			}
 
 			$this->query->authenticate();
