@@ -8,6 +8,9 @@ use hypeJunction\Downloads\Release;
 use hypeJunction\Post\River;
 use Michelf\MarkdownExtra;
 
+/**
+ * Service that synchronizes Github package metadata and releases
+ */
 class GithubEntities {
 
 	use ServiceFacade;

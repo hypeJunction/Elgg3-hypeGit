@@ -105,25 +105,25 @@ ob_start();
 foreach ($deps as $system => $items) {
 	?>
 
-    <table class="elgg-table-alt downloads-deps__table">
-        <thead>
-        <th colspan="2">
-            <h5><?= elgg_echo('ElggPlugin:Dependencies:' . ucwords($system)) ?></h5>
-        </th>
-        </thead>
-        <tbody>
+	<table class="elgg-table-alt downloads-deps__table">
+		<thead>
+		<th colspan="2">
+			<h5><?= elgg_echo('ElggPlugin:Dependencies:' . ucwords($system)) ?></h5>
+		</th>
+		</thead>
+		<tbody>
 		<?php
 		foreach ($items as $item) {
 			?>
-            <tr>
-                <td><?= $item['name'] ?></td>
-                <td><?= $item['version'] ?></td>
-            </tr>
+			<tr>
+				<td><?= $item['name'] ?></td>
+				<td><?= $item['version'] ?></td>
+			</tr>
 			<?php
 		}
 		?>
-        </tbody>
-    </table>
+		</tbody>
+	</table>
 	<?php
 }
 ?>

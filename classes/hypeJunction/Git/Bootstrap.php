@@ -4,8 +4,14 @@ namespace hypeJunction\Git;
 
 use Elgg\DefaultPluginBootstrap;
 
+/**
+ * Plugin bootstrap
+ */
 class Bootstrap extends DefaultPluginBootstrap {
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public function load(): void {
 		$autoloader = dirname(__DIR__, 3) . '/autoloader.php';
 		if (file_exists($autoloader)) {
@@ -13,6 +19,9 @@ class Bootstrap extends DefaultPluginBootstrap {
 		}
 	}
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public function init(): void {
 		elgg_register_event_handler('fields', 'object:download', SetupDownloadFields::class);
 		elgg_register_event_handler('modules', 'object:download', SetupDownloadModules::class);

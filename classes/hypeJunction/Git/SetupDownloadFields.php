@@ -5,6 +5,9 @@ namespace hypeJunction\Git;
 use Elgg\Event;
 use hypeJunction\Fields\MetaField;
 
+/**
+ * Event handler that registers Git-related fields on download entities
+ */
 class SetupDownloadFields {
 
 	/**

@@ -8,8 +8,18 @@ use Elgg\HttpException;
 use Elgg\Request;
 use hypeJunction\Downloads\Download;
 
+/**
+ * Page handler that digests inbound Github webhook payloads
+ */
 class DigestWebhook {
 
+	/**
+	 * Handle the webhook request
+	 *
+	 * @param Request $request HTTP request
+	 *
+	 * @return \Elgg\Http\ResponseBuilder
+	 */
 	public function __invoke(Request $request) {
 		return elgg_call(ELGG_IGNORE_ACCESS | ELGG_SHOW_DISABLED_ENTITIES, function () use ($request) {
 			elgg_set_viewtype('json');
@@ -28,15 +38,15 @@ class DigestWebhook {
 					throw new BadRequestException('Payload is empty');
 				}
 
-				$sig_header = _elgg_services()->request->server->get("X-Hub-Signature");
-				$event = _elgg_services()->request->server->get("X-Github-Event");
+				$sig_header = _elgg_services()->request->server->get('X-Hub-Signature');
+				$event = _elgg_services()->request->server->get('X-Github-Event');
 
 				list($algo, $hash) = explode('=', $sig_header, 2);
 
 				$expected_hash = hash_hmac($algo, $payload, $entity->{'github:secret'});
 
 				if (!hash_equals($expected_hash, $hash)) {
-					throw new BadRequestException("Invalid signature");
+					throw new BadRequestException('Invalid signature');
 				}
 
 				$data = json_decode($payload, true);
